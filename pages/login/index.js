@@ -1,6 +1,8 @@
 export default function  Login(){
-    return <div>
-        <> </>
+    return (
+    <div>
+        <p> login</p>
     </div>
+    );
     
 }
