@@ -1,7 +1,7 @@
 export default function UserProfileCard() {
   return (
     <div>
-      <h1> header</h1>
+      <h1> User Profile</h1>
     </div>
   );
 }
