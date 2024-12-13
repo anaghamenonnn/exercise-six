@@ -1,19 +1,18 @@
-export default function CreateUserForm(){
-    return (
-        <div>
-        <h2>Create User Form</h2>
-        <form
-        // onSubmit={(e)} => createUser (e)}
-        >
-            <label htmlFor="email"> Email</label>
-            <input type="email" name= "email" />
+import styles from "../../styles/formStyles.module.css";
 
-            <label htmlFor="password"> Email</label>
-            <input type="password" name= "password" />
+export default function CreateUserForm({ createUserFunction }) {
+  return (
+    <div className={styles.formWrapper}>
+      <h2>Create User Form</h2>
+      <form onSubmit={(e) => createUserFunction(e)}>
+        <label htmlFor="email">Email</label>
+        <input type="email" name="email" required />
 
-            <button type="submit"> Create User</button>
+        <label htmlFor="password">Password</label>
+        <input type="password" name="password" required />
 
-        </form>
-        </div>
-    );
+        <button type="submit">Create User</button>
+      </form>
+    </div>
+  );
 }

@@ -1,22 +1,18 @@
-import styles from "@styles/Header.module.css";
-import Link from "/next/Link";
+import styles from "../../styles/formStyles.module.css";
 
-export default function LoginForm(){
-    return (
-        <div>
-        <h2>Login Form</h2>
-        <form
-        // onSubmit={(e)} => createUser (e)}
-        >
-            <label htmlFor="email"> Email</label>
-            <input type="email" name= "email" />
+export default function LoginForm({ loginUserFunction }) {
+  return (
+    <div className={styles.formWrapper}>
+      <h2>Login Form</h2>
+      <form onSubmit={(e) => loginUserFunction(e)}>
+        <label htmlFor="email"> Email</label>
+        <input type="email" name="email" />
 
-            <label htmlFor="password"> Email</label>
-            <input type="password" name= "password" />
+        <label htmlFor="password">Password</label>
+        <input type="password" name="password" />
 
-            <button type="submit"> Create User</button>
-
-        </form>
-        </div>
-    );
+        <button type="submit"> Login User</button>
+      </form>
+    </div>
+  );
 }

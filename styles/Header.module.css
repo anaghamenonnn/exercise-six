@@ -1,1 +1,41 @@
-ç
+.navWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #a33ae3;
+    color: white;
+    box-shadow: 0 2px 4px rgba(232, 132, 244, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navWrapper h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .navWrapper nav {
+    margin: auto;
+  }
+  
+  .listWrapper {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+  }
+  
+  .listWrapper a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .listWrapper a:hover {
+    color: #ffcc00;
+  }

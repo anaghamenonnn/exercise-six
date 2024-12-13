@@ -1,8 +1,15 @@
-export default function  Login(){
-    return (
+import LoginForm from "@/components/LoginForm";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+
+export default function Login({ isLoggedIn = false, loginUserFunction }) {
+  const router = useRouter();
+  useEffect(() => {
+    if (isLoggedIn) router.push("/");
+  }, [isLoggedIn]);
+  return (
     <div>
-        <p> login</p>
+      <LoginForm loginUserFunction={loginUserFunction} />
     </div>
-    );
-    
+  );
 }
